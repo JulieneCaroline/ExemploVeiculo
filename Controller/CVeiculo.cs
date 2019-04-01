@@ -14,34 +14,34 @@ namespace Controller
         {
             List<MVeiculo> retorno = null;
 
-            if (item != null && item.RENAVAM != null && item.RENAVAM.Length == 11)
+            if (item != null && item.RENAVAM != null)
             {
                 //string cpf = item.CPF.Replace(".", "");
                 //cpf = cpf.Replace("-", "");
                 //cpf = cpf.Trim();
 
-                if (item.Placa == "")
-                {
-                    item.Placa = "";
-                }
+                //if (item.Placa == "")
+                //{
+                //    item.Placa = "";
+                //}
 
-                if (item.Modelo == "")
-                {
-                    item.Modelo = "";
-                }
+                //if (item.Modelo == "")
+                //{
+                //    item.Modelo = "";
+                //}
 
-                if (item.AnoModelo == 0)
-                {
-                    item.AnoModelo = 0;
-                }
+                //if (item.AnoModelo == 0)
+                //{
+                //    item.AnoModelo = 0;
+                //}
 
-                if (item.AnoFabricacao == 0)
-                {
-                    item.AnoFabricacao = 0;
-                }
+                //if (item.AnoFabricacao == 0)
+                //{
+                //    item.AnoFabricacao = 0;
+                //}
 
-                retorno = DVeiculo.Pesquisar(item);
             }
+            retorno = DVeiculo.Pesquisar(item);
 
             return retorno;
         }
@@ -52,7 +52,7 @@ namespace Controller
 
             if (item != null)
             {
-               
+
                 if (item.RENAVAM == "")
                 {
                     item.RENAVAM = "";
@@ -118,7 +118,7 @@ namespace Controller
                 throw new Exception("Objeto VEICULO RENAVAM inválido");
             }
 
-            if (item.Placa.Trim() == "" || item.Placa.Length > 8)
+            if (item.Placa.Trim() == "" || item.Placa.Length != 8)
             {
                 throw new Exception("Objeto VEICULO Placa inválido");
             }
@@ -130,14 +130,14 @@ namespace Controller
 
             string AuxAnoModelo = item.AnoModelo.ToString();
 
-            if (AuxAnoModelo.Trim() == "" /*AuxAnoModelo.Length >*/ )
+            if (AuxAnoModelo.Trim() == "" || AuxAnoModelo.Length != 4 )
             {
                 throw new Exception("Objeto VEICULO AnoModelo inválido");
             }
 
             string AuxAnoFabricacao = item.AnoFabricacao.ToString();
 
-            if (AuxAnoFabricacao.Trim() == "" /*|| AuxAnoFabricacao.Length > 4*/)
+            if (AuxAnoFabricacao.Trim() == "" || AuxAnoFabricacao.Length != 4)
             {
                 throw new Exception("Objeto VEICULO AnoFabricacao inválido");
             }
@@ -166,4 +166,5 @@ namespace Controller
             }
         }
     }
+
 }

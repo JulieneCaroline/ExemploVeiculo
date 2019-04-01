@@ -28,74 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCadastroPessoa = new System.Windows.Forms.Button();
-            this.buttonPesquisaPessoa = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonPesquisaVeiculo = new System.Windows.Forms.Button();
-            this.buttonCadastroVeiculo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonCadastroPessoa
+            // button1
             // 
-            this.buttonCadastroPessoa.Location = new System.Drawing.Point(12, 12);
-            this.buttonCadastroPessoa.Name = "buttonCadastroPessoa";
-            this.buttonCadastroPessoa.Size = new System.Drawing.Size(153, 23);
-            this.buttonCadastroPessoa.TabIndex = 0;
-            this.buttonCadastroPessoa.Text = "Cadastro de Pessoa";
-            this.buttonCadastroPessoa.UseVisualStyleBackColor = true;
-            this.buttonCadastroPessoa.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Location = new System.Drawing.Point(52, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cadastro de Pessoa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonPesquisaPessoa
+            // button2
             // 
-            this.buttonPesquisaPessoa.Location = new System.Drawing.Point(12, 41);
-            this.buttonPesquisaPessoa.Name = "buttonPesquisaPessoa";
-            this.buttonPesquisaPessoa.Size = new System.Drawing.Size(153, 23);
-            this.buttonPesquisaPessoa.TabIndex = 1;
-            this.buttonPesquisaPessoa.Text = "Pesquisa de Pessoa";
-            this.buttonPesquisaPessoa.UseVisualStyleBackColor = true;
-            this.buttonPesquisaPessoa.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Location = new System.Drawing.Point(52, 41);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Pesquisa de Pessoa";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonPesquisaVeiculo
             // 
-            this.buttonPesquisaVeiculo.Location = new System.Drawing.Point(13, 101);
+            this.buttonPesquisaVeiculo.Location = new System.Drawing.Point(52, 70);
             this.buttonPesquisaVeiculo.Name = "buttonPesquisaVeiculo";
-            this.buttonPesquisaVeiculo.Size = new System.Drawing.Size(152, 23);
-            this.buttonPesquisaVeiculo.TabIndex = 3;
-            this.buttonPesquisaVeiculo.Text = "PesquisaVeiculo";
+            this.buttonPesquisaVeiculo.Size = new System.Drawing.Size(153, 23);
+            this.buttonPesquisaVeiculo.TabIndex = 2;
+            this.buttonPesquisaVeiculo.Text = "Pesquisa de Veiculo";
             this.buttonPesquisaVeiculo.UseVisualStyleBackColor = true;
             this.buttonPesquisaVeiculo.Click += new System.EventHandler(this.buttonPesquisaVeiculo_Click);
             // 
-            // buttonCadastroVeiculo
-            // 
-            this.buttonCadastroVeiculo.Location = new System.Drawing.Point(13, 71);
-            this.buttonCadastroVeiculo.Name = "buttonCadastroVeiculo";
-            this.buttonCadastroVeiculo.Size = new System.Drawing.Size(152, 23);
-            this.buttonCadastroVeiculo.TabIndex = 2;
-            this.buttonCadastroVeiculo.Text = "Cadastro de Veiculo";
-            this.buttonCadastroVeiculo.UseVisualStyleBackColor = true;
-            this.buttonCadastroVeiculo.Click += new System.EventHandler(this.buttonCadastroVeiculo_Click);
-            // 
             // Form1
             // 
+            this.AccessibleDescription = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(177, 246);
+            this.ClientSize = new System.Drawing.Size(264, 161);
             this.Controls.Add(this.buttonPesquisaVeiculo);
-            this.Controls.Add(this.buttonCadastroVeiculo);
-            this.Controls.Add(this.buttonPesquisaPessoa);
-            this.Controls.Add(this.buttonCadastroPessoa);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Menu Principal";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCadastroPessoa;
-        private System.Windows.Forms.Button buttonPesquisaPessoa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonPesquisaVeiculo;
-        private System.Windows.Forms.Button buttonCadastroVeiculo;
     }
 }
 

@@ -30,7 +30,7 @@ namespace DAL
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
-            comando.CommandText = "" +
+            comando.CommandText = "" + 
                 "INSERT INTO TBPessoa(CPF, Nome, DataNascimento) " +
                 "VALUES(@CPF, @Nome, @DataNascimento)";
 
@@ -216,23 +216,23 @@ namespace DAL
                 " FROM TBPessoa " +
                 " WHERE 1=1 ";             
 
-            if(item.CPF.Trim() != "")
-            {
-                comando.CommandText += " AND CPF = @CPF ";
+            //if(item.CPF.Trim() != "")
+            //{
+            //    comando.CommandText += " AND CPF = @CPF ";
 
-                SqlParameter param = new SqlParameter("@CPF", SqlDbType.Char);
-                param.Value = item.CPF;
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@CPF", SqlDbType.Char);
+            //    param.Value = item.CPF;
+            //    comando.Parameters.Add(param);
+            //}
 
-            if (item.Nome.Trim() != "")
-            {
-                comando.CommandText += " AND Nome LIKE @Nome ";
+            //if (item.Nome.Trim() != "")
+            //{
+            //    comando.CommandText += " AND Nome LIKE @Nome ";
 
-                SqlParameter param = new SqlParameter("@Nome", SqlDbType.VarChar);
-                param.Value = "%" + item.Nome + "%";
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@Nome", SqlDbType.VarChar);
+            //    param.Value = "%" + item.Nome + "%";
+            //    comando.Parameters.Add(param);
+            //}
 
 
             SqlDataReader reader = comando.ExecuteReader();

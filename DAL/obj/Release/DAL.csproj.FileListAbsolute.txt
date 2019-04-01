@@ -1,0 +1,9 @@
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\bin\Release\DAL.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\bin\Release\DAL.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\bin\Release\Model.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\bin\Release\Model.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\obj\Release\DAL.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\DAL\obj\Release\DAL.pdb

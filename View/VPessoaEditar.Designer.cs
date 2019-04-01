@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VPessoaEditar));
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDataNascimento = new System.Windows.Forms.DateTimePicker();
@@ -79,7 +80,6 @@
             this.txtCPF.ReadOnly = true;
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 8;
-            this.txtCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCPF_MaskInputRejected);
             // 
             // label2
             // 
@@ -111,8 +111,10 @@
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VPessoaEditar";
-            this.Text = "VPessoaEditar";
+            this.Text = "Editar Pessoa";
             this.Load += new System.EventHandler(this.VPessoaEditar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

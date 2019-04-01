@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class VPessoaEditar
+    partial class VPessoaCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VPessoaCadastro));
             this.label1 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +78,6 @@
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(100, 20);
             this.txtDataNascimento.TabIndex = 3;
-            this.txtDataNascimento.ValueChanged += new System.EventHandler(this.txtDataNascimento_ValueChanged);
             // 
             // label3
             // 
@@ -110,8 +110,10 @@
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VPessoaCadastro";
-            this.Text = "VPessoaCadastro";
+            this.Text = "Cadastrar Pessoa";
             this.Load += new System.EventHandler(this.VPessoaCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,0 +1,6 @@
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\bin\Release\Model.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\bin\Release\Model.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Release\Model.csprojAssemblyReference.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Release\Model.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Release\Model.pdb

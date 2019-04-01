@@ -63,10 +63,5 @@ namespace View
                 Close();
             }
         }
-
-        private void txtCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
     }
 }

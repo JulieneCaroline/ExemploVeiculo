@@ -23,8 +23,8 @@ namespace View
         {
             MPessoa item = new MPessoa();
 
-            item.CPF = txtCPF.Text;
-            item.Nome = txtNome.Text;
+            //item.CPF = txtCPF.Text;
+            //item.Nome = txtNome.Text;
 
             dataGridView1.DataSource = CPessoa.Pesquisar(item);
         }
@@ -40,8 +40,8 @@ namespace View
                 dataGridView1.SelectedRows.Count > 0)
             {
                 DialogResult r = MessageBox.Show("Deseja excluir esta pessoa?", "",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                    MessageBoxDefaultButton.Button2);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2);
 
                 if (r == DialogResult.Yes)
                 {
@@ -66,7 +66,7 @@ namespace View
                             "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    if(sucesso)
+                    if (sucesso)
                     {
                         MessageBox.Show("Pessoa excluída com sucesso", "",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,43 +90,37 @@ namespace View
             Excluir();
         }
 
-        //private void editarToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Editar();
-        //}
-
-        //private void Editar()
-        //{
-        //    if (dataGridView1.SelectedRows != null &&
-        //       dataGridView1.SelectedRows.Count > 0)
-        //    {
-        //        MPessoa item = new MPessoa();
-        //        item.CPF = dataGridView1.SelectedRows[0].
-        //            Cells["cPFDataGridViewTextBoxColumn"].Value.ToString();
-
-        //        VPessoaEditar v = new VPessoaEditar(item);
-        //        v.ShowDialog();
-
-        //        if(v.Atualizou)
-        //        {
-        //            //atualiza o grid
-        //            //forma 1
-        //            //atualiza a lista sem ir no banco
-
-        //            //forma 2
-        //            btnPesquisar_Click(null, null);
-        //        }
-        //    }
-        //}
-
-        private void txtCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Editar();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void Editar()
         {
+            if (dataGridView1.SelectedRows != null &&
+               dataGridView1.SelectedRows.Count > 0)
+            {
+                MPessoa item = new MPessoa();
+                item.CPF = dataGridView1.SelectedRows[0].
+                    Cells["cPFDataGridViewTextBoxColumn"].Value.ToString();
 
+                VPessoaEditar v = new VPessoaEditar(item);
+                v.ShowDialog();
+
+                if (v.Atualizou)
+                {
+                    //atualiza o grid
+                    //forma 1
+                    //atualiza a lista sem ir no banco
+
+                    //forma 2
+                    btnPesquisar_Click(null, null);
+                }
+            }
+        }
+
+        private void toolStripButtonCadastroVeiculo_Click(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows != null &&
                 dataGridView1.SelectedRows.Count > 0)
             {
@@ -136,16 +130,23 @@ namespace View
 
                 if (r == DialogResult.Yes)
                 {
-                    MPessoa item = (MPessoa)dataGridView1.SelectedRows[0].DataBoundItem;
+                    //MPessoa item = (MPessoa)dataGridView1.SelectedRows[0].DataBoundItem;
 
-                    string nome = item.Nome;
-                    string cpf = item.CPF;
+                    //string nome = item.Nome;
+                    //string cpf = item.CPF;
 
-                    MessageBox.Show(cpf);
-                    new VVeiculoCadastro(item.CPF).ShowDialog();
+                    //MessageBox.Show(cpf);
+                    //new VVeiculoCadastro().ShowDialog();
 
+                    MPessoa item = new MPessoa();
+                    item.CPF = dataGridView1.SelectedRows[0].
+                        Cells["cPFDataGridViewTextBoxColumn"].Value.ToString();
+
+                    VVeiculoCadastro v = new VVeiculoCadastro(item);
+                    v.ShowDialog();
                 }
             }
+
 
         }
 

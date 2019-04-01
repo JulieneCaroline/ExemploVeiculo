@@ -16,9 +16,3 @@ C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.csprojAssemblyRefe
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.dll
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.pdb
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\bin\Debug\Model.dll
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\bin\Debug\Model.pdb
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\obj\Debug\Model.csprojAssemblyReference.cache
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\obj\Debug\Model.dll
-C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\Model\obj\Debug\Model.pdb

@@ -1,0 +1,11 @@
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\Controller.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\Controller.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\DAL.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\Model.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\DAL.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\bin\Release\Model.pdb
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\obj\Release\Controller.csprojAssemblyReference.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\obj\Release\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\obj\Release\Controller.csproj.CopyComplete
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\obj\Release\Controller.dll
+C:\Users\Juliene\Desktop\ExemploVeiculo\Controller\obj\Release\Controller.pdb

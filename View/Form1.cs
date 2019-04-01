@@ -19,7 +19,7 @@ namespace View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new VPessoaEditar().ShowDialog();
+            new VPessoaCadastro().ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,19 +27,9 @@ namespace View
             new VPessoaPesquisa().ShowDialog();
         }
 
-        private void buttonCadastroVeiculo_Click(object sender, EventArgs e)
-        {
-            //new VVeiculoCadastro().ShowDialog();
-        }
-
         private void buttonPesquisaVeiculo_Click(object sender, EventArgs e)
         {
             new VVeiculoPesquisa().ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

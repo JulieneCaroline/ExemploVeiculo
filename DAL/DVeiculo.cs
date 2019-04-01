@@ -1,12 +1,13 @@
 ﻿using Model;
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -27,36 +28,54 @@ namespace DAL
                 throw new Exception("Falha na conexão com o SGBD");
             }
 
+            //string RENAVAM = item.RENAVAM;
+            //string Placa = item.Placa;
+            //string Modelo = item.Modelo;
+            //string AnoFabricacao = item.AnoFabricacao.ToString();
+            //string AnoModelo = item.AnoModelo.ToString();
+            //string PessoaCPF = item.PessoaCPF;
+
+            //MessageBox.Show(RENAVAM);
+            //MessageBox.Show(Placa);
+            //MessageBox.Show(Modelo);
+            //MessageBox.Show(AnoFabricacao);
+            //MessageBox.Show(AnoModelo);
+            //MessageBox.Show(PessoaCPF);
+
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
             comando.CommandText = "" +
-                "INSERT INTO TBVeiculo(RENAVAM, Placa, Modelo, AnoFabricacao, AnoModelo, PessoaCPF) " +
-                "VALUES(@RENAVAM, @Placa, @Modelo, @AnoFabricacao, @AnoModelo, @PessoaCPF)";
+            "INSERT INTO TBVeiculo(RENAVAM, Placa, Modelo, AnoFabricacao, AnoModelo, PessoaCPF) " +
+            "VALUES(@RENAVAM, @Placa, @Modelo, @AnoFabricacao, @AnoModelo, @PessoaCPF)";
 
             SqlParameter param = new SqlParameter("@RENAVAM", SqlDbType.Char);
             param.Value = item.RENAVAM;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@Placa", SqlDbType.VarChar);
+            param = new SqlParameter("@Placa", SqlDbType.Char);
             param.Value = item.Placa;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@Modelo", SqlDbType.Date);
+            param = new SqlParameter("@Modelo", SqlDbType.Char);
             param.Value = item.Modelo;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@AnoFabricacao", SqlDbType.Date);
-            param.Value = item.AnoFabricacao;
+            param = new SqlParameter("@AnoFabricacao", SqlDbType.Int);
+            int AnoFabricacaoBd = Convert.ToInt32(item.AnoFabricacao);
+            param.Value = AnoFabricacaoBd;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@AnoModelo", SqlDbType.Date);
-            param.Value = item.AnoModelo;
+            param = new SqlParameter("@AnoModelo", SqlDbType.Int);
+            int AnoModeloBd = item.AnoModelo;
+            param.Value = AnoModeloBd;
             comando.Parameters.Add(param);
 
-            /* param = new SqlParameter("@PessoaCPF", SqlDbType.Date);
+            param = new SqlParameter("@PessoaCPF", SqlDbType.Char);
             param.Value = item.PessoaCPF;
-            comando.Parameters.Add(param); */
+            comando.Parameters.Add(param);
+
+            //string teste = CommandText.ToString();
 
             try
             {
@@ -64,7 +83,7 @@ namespace DAL
             }
             catch
             {
-                throw new Exception("O comando não pode ser executado");
+                throw new Exception("O comando não pode ser executado.");
             }
             finally
             {
@@ -241,41 +260,41 @@ namespace DAL
                 " FROM TBVeiculo" +
                 " WHERE 1=1 ";
 
-            if (item.RENAVAM.Trim() != "")
-            {
-                comando.CommandText += " AND RENAVAM = @RENAVAM ";
+            //if (item.RENAVAM.Trim() != "")
+            //{
+            //    comando.CommandText += " AND RENAVAM = @RENAVAM ";
 
-                SqlParameter param = new SqlParameter("@RENAVAM", SqlDbType.Char);
-                param.Value = item.RENAVAM;
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@RENAVAM", SqlDbType.Char);
+            //    param.Value = item.RENAVAM;
+            //    comando.Parameters.Add(param);
+            //}
 
-            if (item.Placa.Trim() != "")
-            {
-                comando.CommandText += " AND Placa = @Placa ";
+            //if (item.Placa.Trim() != "")
+            //{
+            //    comando.CommandText += " AND Placa = @Placa ";
 
-                SqlParameter param = new SqlParameter("@Placa", SqlDbType.Char);
-                param.Value = item.Placa;
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@Placa", SqlDbType.Char);
+            //    param.Value = item.Placa;
+            //    comando.Parameters.Add(param);
+            //}
 
-            if (item.Modelo.Trim() != "")
-            {
-                comando.CommandText += " AND Modelo LIKE @Modelo ";
+            //if (item.Modelo.Trim() != "")
+            //{
+            //    comando.CommandText += " AND Modelo LIKE @Modelo ";
 
-                SqlParameter param = new SqlParameter("@Modelo", SqlDbType.VarChar);
-                param.Value = "%" + item.Modelo + "%";
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@Modelo", SqlDbType.VarChar);
+            //    param.Value = "%" + item.Modelo + "%";
+            //    comando.Parameters.Add(param);
+            //}
 
-            if (item.PessoaCPF.Trim() != "")
-            {
-                comando.CommandText += " AND PessoaCPF = @PessoaCPF ";
+            //if (item.PessoaCPF.Trim() != "")
+            //{
+            //    comando.CommandText += " AND PessoaCPF = @PessoaCPF ";
 
-                SqlParameter param = new SqlParameter("@Modelo", SqlDbType.VarChar);
-                param.Value = "%" + item.PessoaCPF + "%";
-                comando.Parameters.Add(param);
-            }
+            //    SqlParameter param = new SqlParameter("@Modelo", SqlDbType.VarChar);
+            //    param.Value = "%" + item.PessoaCPF + "%";
+            //    comando.Parameters.Add(param);
+            //}
 
             //if (item.AnoModelo.Trim() != "")
             //{
@@ -306,6 +325,7 @@ namespace DAL
                     retorno = new List<MVeiculo>();
 
                 MVeiculo veiculo = new MVeiculo();
+
                 veiculo.RENAVAM = reader["RENAVAM"].ToString();
                 veiculo.Placa = reader["Placa"].ToString();
                 veiculo.Modelo = reader["Modelo"].ToString();
@@ -320,6 +340,7 @@ namespace DAL
             conexao.Close();
 
             return retorno;
+
         }
     }
 }

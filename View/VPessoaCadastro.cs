@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class VPessoaEditar : Form
+    public partial class VPessoaCadastro : Form
     {
-        public VPessoaEditar()
+        public VPessoaCadastro()
         {
             InitializeComponent();
         }
@@ -40,11 +40,6 @@ namespace View
         }
 
         private void VPessoaCadastro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDataNascimento_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -14,19 +14,20 @@ namespace Controller
         {
             List<MPessoa> retorno = null;
 
-            if(item != null && item.Nome != null && item.Nome.Length <= 200)
-            {
-                string cpf = item.CPF.Replace(".", "");
-                cpf = cpf.Replace("-", "");
-                cpf = cpf.Trim();
+            //if(item != null && item.Nome != null && item.Nome.Length <= 200)
+            //{
+            //    string cpf = item.CPF.Replace(".", "");
+            //    cpf = cpf.Replace("-", "");
+            //    cpf = cpf.Trim();
 
-                if(cpf == "")
-                {
-                    item.CPF = "";
-                }
+            //    if(cpf == "")
+            //    {
+            //        item.CPF = "";
+            //    }
 
-                retorno = DPessoa.Pesquisar(item);
-            }
+            //    retorno = DPessoa.Pesquisar(item);
+            //}
+            retorno = DPessoa.Pesquisar(item);
 
             return retorno;
         }
