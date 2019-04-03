@@ -46,6 +46,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCadastroVeiculo = new System.Windows.Forms.ToolStripButton();
+            this.adicionarVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mPessoaBindingSource)).BeginInit();
@@ -154,21 +155,22 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excluirToolStripMenuItem,
-            this.editarToolStripMenuItem});
+            this.editarToolStripMenuItem,
+            this.adicionarVeiculoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // excluirToolStripMenuItem
             // 
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
@@ -206,6 +208,13 @@
             this.toolStripButtonCadastroVeiculo.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonCadastroVeiculo.Text = "toolStripButton2";
             this.toolStripButtonCadastroVeiculo.Click += new System.EventHandler(this.toolStripButtonCadastroVeiculo_Click);
+            // 
+            // adicionarVeiculoToolStripMenuItem
+            // 
+            this.adicionarVeiculoToolStripMenuItem.Name = "adicionarVeiculoToolStripMenuItem";
+            this.adicionarVeiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adicionarVeiculoToolStripMenuItem.Text = "Adicionar veiculo";
+            this.adicionarVeiculoToolStripMenuItem.Click += new System.EventHandler(this.adicionarVeiculoToolStripMenuItem_Click);
             // 
             // VPessoaPesquisa
             // 
@@ -252,5 +261,6 @@
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonCadastroVeiculo;
+        private System.Windows.Forms.ToolStripMenuItem adicionarVeiculoToolStripMenuItem;
     }
 }

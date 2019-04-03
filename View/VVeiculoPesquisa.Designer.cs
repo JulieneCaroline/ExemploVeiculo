@@ -54,6 +54,7 @@
             this.buttonPesquisarVeiculo = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonExcluirVeiculo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonEditarVeiculo = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).BeginInit();
             this.contextMenuStripVeiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mVeiculoBindingSource)).BeginInit();
@@ -263,7 +264,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonExcluirVeiculo});
+            this.toolStripButtonExcluirVeiculo,
+            this.toolStripButtonEditarVeiculo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(774, 25);
@@ -280,7 +282,17 @@
             this.toolStripButtonExcluirVeiculo.Text = "toolStripButton1";
             this.toolStripButtonExcluirVeiculo.Click += new System.EventHandler(this.toolStripButtonExcluirVeiculo_Click);
             // 
-            // VPesquisaVeiculo
+            // toolStripButtonEditarVeiculo
+            // 
+            this.toolStripButtonEditarVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonEditarVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonEditarVeiculo.Image")));
+            this.toolStripButtonEditarVeiculo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonEditarVeiculo.Name = "toolStripButtonEditarVeiculo";
+            this.toolStripButtonEditarVeiculo.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonEditarVeiculo.Text = "toolStripButton1";
+            this.toolStripButtonEditarVeiculo.Click += new System.EventHandler(this.toolStripButtonEditarVeiculo_Click);
+            // 
+            // VVeiculoPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +313,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "VPesquisaVeiculo";
+            this.Name = "VVeiculoPesquisa";
             this.Text = "Pesquisar Veiculos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
             this.contextMenuStripVeiculos.ResumeLayout(false);
@@ -339,5 +351,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn anoFabricacaoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn anoModeloDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pessoaCPFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButtonEditarVeiculo;
     }
 }

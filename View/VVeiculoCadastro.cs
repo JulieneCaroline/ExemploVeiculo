@@ -23,6 +23,8 @@ namespace View
             atual = item;
         }
 
+        
+
         private void buttonSalvarVeiculo_Click(object sender, EventArgs e)
         {
             // MessageBox.Show(atual.Nome);
@@ -30,14 +32,15 @@ namespace View
             ////todo: validação da entrada
             MVeiculo item = new MVeiculo();
 
-            //item.RENAVAM = textBoxRENAVAM.Text;
-            //item.Placa = textBoxPlaca.Text;
-            //item.Modelo = textBoxModelo.Text;
-            //// Regex regex = new Regex(@"[^\d]");
-            //int AuxAnoModelo = Convert.ToInt32(textBoxAnoModelo.Text);
-            //item.AnoModelo = AuxAnoModelo;
-            //int AuxAnoFabricacao = Convert.ToInt32(textBoxAnoFabricacao.Text);
-            //item.AnoFabricacao = AuxAnoFabricacao;
+            item.RENAVAM = textBoxRENAVAM.Text;
+            item.Placa = textBoxPlaca.Text;
+            item.Modelo = textBoxModelo.Text;
+            // Regex regex = new Regex(@"[^\d]");
+            int AuxAnoModelo = Convert.ToInt32(textBoxAnoModelo.Text);
+            item.AnoModelo = AuxAnoModelo;
+            int AuxAnoFabricacao = Convert.ToInt32(textBoxAnoFabricacao.Text);
+            item.AnoFabricacao = AuxAnoFabricacao;
+            item.PessoaCPF = atual.CPF;
 
             //string cpf = atual.CPF.Replace(".", "");
             //cpf = cpf.Replace("-", "");
@@ -51,12 +54,12 @@ namespace View
             //MessageBox.Show(textBoxModelo.Text);
             //MessageBox.Show(cpf);
 
-            item.RENAVAM = "11111111111";
-            item.Placa = "ssss2222";
-            item.Modelo = "gol";
-            item.AnoModelo = 2000;
-            item.AnoFabricacao = 2001;
-            item.PessoaCPF = "111.111.111-11";
+            //item.RENAVAM = "00000000000";
+            //item.Placa = "ssss2222";
+            //item.Modelo = "gol";
+            //item.AnoModelo = 2000;
+            //item.AnoFabricacao = 2001;
+            //item.PessoaCPF = "111.111.111-11";
 
             try
             {
@@ -67,6 +70,21 @@ namespace View
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void VVeiculoCadastro_Load(object sender, EventArgs e)
+        {
+                atual = CPessoa.Obter(atual);
+
+                if (atual != null)
+                {
+                    txtNome.Text = atual.Nome;
+                    textBoxCPF.Text = atual.CPF;
+                }
+                else
+                {
+                    Close();
+                }
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +14,14 @@ namespace View
 {
     public partial class VVeiculoEditar : Form
     {
-        private object item;
+        MVeiculo atual = null;
+        internal bool Atualizou = false;
 
-        public VVeiculoEditar()
+        public VVeiculoEditar(MVeiculo item)
         {
             InitializeComponent();
-        }
+            atual = item;
 
-        public VVeiculoEditar(object item)
-        {
-            this.item = item;
         }
 
         private void buttonSalvarVeiculo_Click(object sender, EventArgs e)
@@ -34,6 +34,24 @@ namespace View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void VVeiculoEditar_Load(object sender, EventArgs e)
+        {
+            atual = CVeiculo.Obter(atual);
+
+            if (atual != null)
+            {
+                textBoxRENAVAM.Text = atual.RENAVAM;
+                textBoxPlaca.Text = atual.Placa;
+                textBoxModelo.Text = atual.Modelo;
+                textBoxAnoModelo.Text = atual.AnoModelo.ToString();
+                textBoxAnoFabricacao.Text = atual.ToString();
+            }
+            else
+            {
+                Close();
             }
         }
     }

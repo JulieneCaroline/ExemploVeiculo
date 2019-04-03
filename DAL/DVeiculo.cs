@@ -75,15 +75,14 @@ namespace DAL
             param.Value = item.PessoaCPF;
             comando.Parameters.Add(param);
 
-            //string teste = CommandText.ToString();
-
             try
             {
                 comando.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-                throw new Exception("O comando não pode ser executado.");
+                //throw new Exception("O comando não pode ser executado.");
+                throw ex;
             }
             finally
             {

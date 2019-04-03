@@ -104,8 +104,36 @@ namespace View
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VVeiculoEditar v = new VVeiculoEditar();
-            v.ShowDialog();
+            Editar();
+        }
+
+        private void toolStripButtonEditarVeiculo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Editar()
+        {
+            if (dataGridViewVeiculo.SelectedRows != null &&
+               dataGridViewVeiculo.SelectedRows.Count > 0)
+            {
+                MVeiculo item = new MVeiculo();
+                item.RENAVAM = dataGridViewVeiculo.SelectedRows[0].
+                    Cells["rENAVAMDataGridViewTextBoxColumn"].Value.ToString();
+
+                VVeiculoEditar v = new VVeiculoEditar(item);
+                v.ShowDialog();
+
+                if (v.Atualizou)
+                {
+                    //atualiza o grid
+                    //forma 1
+                    //atualiza a lista sem ir no banco
+
+                    //forma 2
+                    // btnPesquisar_Click(null, null);
+                }
+            }
         }
     }
 }

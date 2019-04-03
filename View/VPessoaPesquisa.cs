@@ -121,6 +121,11 @@ namespace View
 
         private void toolStripButtonCadastroVeiculo_Click(object sender, EventArgs e)
         {
+            Cadastrar();
+        }
+
+        private void Cadastrar()
+        {
             if (dataGridView1.SelectedRows != null &&
                 dataGridView1.SelectedRows.Count > 0)
             {
@@ -146,13 +151,16 @@ namespace View
                     v.ShowDialog();
                 }
             }
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void adicionarVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastrar();
         }
     }
 }
