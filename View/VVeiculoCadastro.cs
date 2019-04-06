@@ -42,25 +42,6 @@ namespace View
             item.AnoFabricacao = AuxAnoFabricacao;
             item.PessoaCPF = atual.CPF;
 
-            //string cpf = atual.CPF.Replace(".", "");
-            //cpf = cpf.Replace("-", "");
-            //cpf = cpf.Trim();
-            //item.PessoaCPF = cpf;
-
-            //MessageBox.Show(textBoxAnoModelo.Text);
-            //MessageBox.Show(textBoxAnoFabricacao.Text);
-            //MessageBox.Show(textBoxRENAVAM.Text);
-            //MessageBox.Show(textBoxPlaca.Text);
-            //MessageBox.Show(textBoxModelo.Text);
-            //MessageBox.Show(cpf);
-
-            //item.RENAVAM = "00000000000";
-            //item.Placa = "ssss2222";
-            //item.Modelo = "gol";
-            //item.AnoModelo = 2000;
-            //item.AnoFabricacao = 2001;
-            //item.PessoaCPF = "111.111.111-11";
-
             try
             {
                 CVeiculo.Inserir(item);
@@ -85,6 +66,11 @@ namespace View
                 {
                     Close();
                 }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

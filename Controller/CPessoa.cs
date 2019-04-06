@@ -75,6 +75,11 @@ namespace Controller
             }
         }
 
+        public static object Obter(object atualPessoa)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Inserir(MPessoa item)
         {
             if(item == null)

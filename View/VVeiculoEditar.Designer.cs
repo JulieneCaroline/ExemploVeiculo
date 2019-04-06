@@ -40,11 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxCpf = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonSalvarVeiculo
             // 
-            this.buttonSalvarVeiculo.Location = new System.Drawing.Point(29, 222);
+            this.buttonSalvarVeiculo.Location = new System.Drawing.Point(29, 250);
             this.buttonSalvarVeiculo.Name = "buttonSalvarVeiculo";
             this.buttonSalvarVeiculo.Size = new System.Drawing.Size(237, 23);
             this.buttonSalvarVeiculo.TabIndex = 38;
@@ -54,35 +56,35 @@
             // 
             // textBoxAnoFabricacao
             // 
-            this.textBoxAnoFabricacao.Location = new System.Drawing.Point(127, 178);
+            this.textBoxAnoFabricacao.Location = new System.Drawing.Point(127, 224);
             this.textBoxAnoFabricacao.Name = "textBoxAnoFabricacao";
             this.textBoxAnoFabricacao.Size = new System.Drawing.Size(139, 20);
             this.textBoxAnoFabricacao.TabIndex = 37;
             // 
             // textBoxAnoModelo
             // 
-            this.textBoxAnoModelo.Location = new System.Drawing.Point(127, 143);
+            this.textBoxAnoModelo.Location = new System.Drawing.Point(127, 187);
             this.textBoxAnoModelo.Name = "textBoxAnoModelo";
             this.textBoxAnoModelo.Size = new System.Drawing.Size(139, 20);
             this.textBoxAnoModelo.TabIndex = 36;
             // 
             // textBoxModelo
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(127, 103);
+            this.textBoxModelo.Location = new System.Drawing.Point(127, 147);
             this.textBoxModelo.Name = "textBoxModelo";
             this.textBoxModelo.Size = new System.Drawing.Size(139, 20);
             this.textBoxModelo.TabIndex = 35;
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(127, 58);
+            this.textBoxPlaca.Location = new System.Drawing.Point(127, 103);
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.Size = new System.Drawing.Size(139, 20);
             this.textBoxPlaca.TabIndex = 34;
             // 
             // textBoxRENAVAM
             // 
-            this.textBoxRENAVAM.Location = new System.Drawing.Point(127, 18);
+            this.textBoxRENAVAM.Location = new System.Drawing.Point(127, 65);
             this.textBoxRENAVAM.Name = "textBoxRENAVAM";
             this.textBoxRENAVAM.Size = new System.Drawing.Size(139, 20);
             this.textBoxRENAVAM.TabIndex = 33;
@@ -90,7 +92,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 185);
+            this.label6.Location = new System.Drawing.Point(26, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 31;
@@ -99,7 +101,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 150);
+            this.label5.Location = new System.Drawing.Point(26, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 30;
@@ -108,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 110);
+            this.label4.Location = new System.Drawing.Point(34, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 29;
@@ -117,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 65);
+            this.label3.Location = new System.Drawing.Point(34, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 28;
@@ -126,17 +128,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 21);
+            this.label2.Location = new System.Drawing.Point(27, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "RENAVAM";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "CPF";
+            // 
+            // comboBoxCpf
+            // 
+            this.comboBoxCpf.FormattingEnabled = true;
+            this.comboBoxCpf.Location = new System.Drawing.Point(127, 22);
+            this.comboBoxCpf.Name = "comboBoxCpf";
+            this.comboBoxCpf.Size = new System.Drawing.Size(139, 21);
+            this.comboBoxCpf.TabIndex = 40;
             // 
             // VVeiculoEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 274);
+            this.Controls.Add(this.comboBoxCpf);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalvarVeiculo);
             this.Controls.Add(this.textBoxAnoFabricacao);
             this.Controls.Add(this.textBoxAnoModelo);
@@ -153,6 +174,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VVeiculoEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Veiculo";
             this.Load += new System.EventHandler(this.VVeiculoEditar_Load);
             this.ResumeLayout(false);
@@ -173,5 +195,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxCpf;
     }
 }

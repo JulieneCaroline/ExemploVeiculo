@@ -118,6 +118,12 @@ namespace Controller
                 throw new Exception("Objeto VEICULO AnoFabricacao inválido");
             }
 
+
+            if (item.AnoModelo < item.AnoFabricacao)
+            {
+                throw new Exception("Objeto VEICULO AnoModelo menor que AnoFabricacao");
+            }
+
             try
             {
                 DVeiculo.Inserir(item);

@@ -139,7 +139,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 42);
+            this.label1.Location = new System.Drawing.Point(19, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 13;
@@ -157,7 +157,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 18);
+            this.label7.Location = new System.Drawing.Point(19, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 13);
             this.label7.TabIndex = 27;
@@ -170,6 +170,7 @@
             this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(139, 20);
             this.txtNome.TabIndex = 28;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // VVeiculoCadastro
             // 
@@ -194,6 +195,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VVeiculoCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Veiculos";
             this.Load += new System.EventHandler(this.VVeiculoCadastro_Load);
             this.ResumeLayout(false);

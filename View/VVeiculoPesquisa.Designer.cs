@@ -314,6 +314,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "VVeiculoPesquisa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Veiculos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
             this.contextMenuStripVeiculos.ResumeLayout(false);

@@ -118,8 +118,12 @@ namespace View
                dataGridViewVeiculo.SelectedRows.Count > 0)
             {
                 MVeiculo item = new MVeiculo();
+                MPessoa pessoa = new MPessoa();
+
                 item.RENAVAM = dataGridViewVeiculo.SelectedRows[0].
                     Cells["rENAVAMDataGridViewTextBoxColumn"].Value.ToString();
+
+              
 
                 VVeiculoEditar v = new VVeiculoEditar(item);
                 v.ShowDialog();

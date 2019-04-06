@@ -42,11 +42,11 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mPessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCadastroVeiculo = new System.Windows.Forms.ToolStripButton();
-            this.adicionarVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mPessoaBindingSource)).BeginInit();
@@ -158,21 +158,28 @@
             this.editarToolStripMenuItem,
             this.adicionarVeiculoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 70);
             // 
             // excluirToolStripMenuItem
             // 
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
+            // adicionarVeiculoToolStripMenuItem
+            // 
+            this.adicionarVeiculoToolStripMenuItem.Name = "adicionarVeiculoToolStripMenuItem";
+            this.adicionarVeiculoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.adicionarVeiculoToolStripMenuItem.Text = "Adicionar veiculo";
+            this.adicionarVeiculoToolStripMenuItem.Click += new System.EventHandler(this.adicionarVeiculoToolStripMenuItem_Click);
             // 
             // mPessoaBindingSource
             // 
@@ -209,13 +216,6 @@
             this.toolStripButtonCadastroVeiculo.Text = "toolStripButton2";
             this.toolStripButtonCadastroVeiculo.Click += new System.EventHandler(this.toolStripButtonCadastroVeiculo_Click);
             // 
-            // adicionarVeiculoToolStripMenuItem
-            // 
-            this.adicionarVeiculoToolStripMenuItem.Name = "adicionarVeiculoToolStripMenuItem";
-            this.adicionarVeiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.adicionarVeiculoToolStripMenuItem.Text = "Adicionar veiculo";
-            this.adicionarVeiculoToolStripMenuItem.Click += new System.EventHandler(this.adicionarVeiculoToolStripMenuItem_Click);
-            // 
             // VPessoaPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +232,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "VPessoaPesquisa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de pessoas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

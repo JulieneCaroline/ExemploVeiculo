@@ -15,6 +15,7 @@ namespace View
     public partial class VVeiculoEditar : Form
     {
         MVeiculo atual = null;
+        MPessoa atualPessoa = null;
         internal bool Atualizou = false;
 
         public VVeiculoEditar(MVeiculo item)
@@ -60,9 +61,13 @@ namespace View
         private void VVeiculoEditar_Load(object sender, EventArgs e)
         {
             atual = CVeiculo.Obter(atual);
+           
 
-            if (atual != null)
+            
+
+            if (atual != null && atualPessoa != null)
             {
+                comboBoxCpf.Text = atual.PessoaCPF;
                 textBoxRENAVAM.Text = atual.RENAVAM;
                 textBoxPlaca.Text = atual.Placa;
                 textBoxModelo.Text = atual.Modelo;
