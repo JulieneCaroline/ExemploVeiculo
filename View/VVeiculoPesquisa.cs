@@ -109,7 +109,7 @@ namespace View
 
         private void toolStripButtonEditarVeiculo_Click(object sender, EventArgs e)
         {
-
+            Editar();
         }
 
         private void Editar()

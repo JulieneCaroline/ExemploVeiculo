@@ -96,18 +96,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(30, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(97, 13);
             this.label6.TabIndex = 18;
-            this.label6.Text = "AnoFabricacao";
+            this.label6.Text = "Ano da Fabricacao";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(30, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 17;
-            this.label5.Text = "AnoModelo";
+            this.label5.Text = "Ano do Modelo";
             // 
             // label4
             // 
@@ -148,7 +148,7 @@
             // textBoxCPF
             // 
             this.textBoxCPF.Location = new System.Drawing.Point(131, 42);
-            this.textBoxCPF.Mask = "000.000.000-00";
+            this.textBoxCPF.Mask = "000,000,000-00";
             this.textBoxCPF.Name = "textBoxCPF";
             this.textBoxCPF.ReadOnly = true;
             this.textBoxCPF.Size = new System.Drawing.Size(139, 20);

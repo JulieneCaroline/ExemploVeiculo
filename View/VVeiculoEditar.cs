@@ -26,14 +26,34 @@ namespace View
 
         private void buttonSalvarVeiculo_Click(object sender, EventArgs e)
         {
+
+            atual.RENAVAM = textBoxRENAVAM.Text;
+            atual.Placa = textBoxPlaca.Text;
+            atual.Modelo = textBoxModelo.Text;
+            int AuxAnoModelo = Convert.ToInt32(textBoxAnoModelo.Text);
+            atual.AnoModelo = AuxAnoModelo;
+
+            int AuxAnoFabricacao = Convert.ToInt32(textBoxAnoFabricacao.Text);
+            atual.AnoFabricacao = AuxAnoFabricacao;
+
+            bool sucesso = false;
+
             try
             {
-                //CPessoa.Inserir(item);
+                CVeiculo.Atualizar(atual);
                 MessageBox.Show("Dados salvos com sucesso!");
+                sucesso = true;
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erro na atualização!");
+            }
+
+            if (sucesso)
+            {
+                MessageBox.Show("Dados atualizados com sucesso!");
+                Atualizou = true;
+                Close();
             }
         }
 
@@ -47,7 +67,8 @@ namespace View
                 textBoxPlaca.Text = atual.Placa;
                 textBoxModelo.Text = atual.Modelo;
                 textBoxAnoModelo.Text = atual.AnoModelo.ToString();
-                textBoxAnoFabricacao.Text = atual.ToString();
+                textBoxAnoFabricacao.Text = atual.AnoFabricacao.ToString();
+
             }
             else
             {

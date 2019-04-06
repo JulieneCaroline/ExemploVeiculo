@@ -168,10 +168,10 @@ namespace DAL
             comando.CommandText = "" +
                 " SELECT RENAVAM, Placa, Modelo, AnoFabricacao, AnoModelo, PessoaCPF" +
                 " FROM TBVeiculo" +
-                " WHERE PessoaCPF = @PessoaCPF ";
+                " WHERE RENAVAM = @RENAVAM ";
 
-            SqlParameter param = new SqlParameter("@PessoaCPF", SqlDbType.Char);
-            param.Value = item.PessoaCPF;
+            SqlParameter param = new SqlParameter("@RENAVAM", SqlDbType.Char);
+            param.Value = item.RENAVAM;
             comando.Parameters.Add(param);
 
             SqlDataReader reader = comando.ExecuteReader();

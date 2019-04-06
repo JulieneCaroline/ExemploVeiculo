@@ -53,31 +53,7 @@ namespace Controller
             if (item != null)
             {
 
-                if (item.RENAVAM == "")
-                {
-                    item.RENAVAM = "";
-                }
-
-                if (item.Placa == "")
-                {
-                    item.Placa = "";
-                }
-
-                if (item.Modelo == "")
-                {
-                    item.Modelo = "";
-                }
-
-                if (item.AnoModelo == 0)
-                {
-                    item.AnoModelo = 0;
-                }
-
-                if (item.AnoFabricacao == 0)
-                {
-                    item.AnoFabricacao = 0;
-                }
-
+            
                 retorno = DVeiculo.Obter(item);
             }
 
@@ -98,7 +74,7 @@ namespace Controller
 
             try
             {
-                MVeiculo.Atualizar(item);
+                DVeiculo.Atualizar(item);
             }
             catch
             {

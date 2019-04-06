@@ -1,0 +1,6 @@
+* habilitar os campos de pesquisa
+* comparar anos
+* centralizar telas
+* editar
+* adicionar o campo cpf no VVeiculoEditar
+*Adicionar anoModelo front pesquisaVeiculos

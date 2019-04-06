@@ -48,7 +48,7 @@
             this.buttonSalvarVeiculo.Name = "buttonSalvarVeiculo";
             this.buttonSalvarVeiculo.Size = new System.Drawing.Size(237, 23);
             this.buttonSalvarVeiculo.TabIndex = 38;
-            this.buttonSalvarVeiculo.Text = "Editar";
+            this.buttonSalvarVeiculo.Text = "Salvar";
             this.buttonSalvarVeiculo.UseVisualStyleBackColor = true;
             this.buttonSalvarVeiculo.Click += new System.EventHandler(this.buttonSalvarVeiculo_Click);
             // 
