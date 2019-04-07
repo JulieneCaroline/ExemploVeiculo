@@ -193,6 +193,53 @@ namespace DAL
             }
         }
 
+        public static List<MPessoa> PesquisarComboBox(MPessoa item)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString =
+                ConfigurationManager.ConnectionStrings["conexao"].ConnectionString;
+
+            try
+            {
+                conexao.Open();
+            }
+            catch
+            {
+                throw new Exception("Falha na conexão com o SGBD");
+            }
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+
+            comando.CommandText = "" +
+                " SELECT CPF, Nome, DataNascimento " +
+                " FROM TBPessoa " +
+                " WHERE 1=1 ";
+
+            SqlDataReader reader = comando.ExecuteReader();
+
+            List<MPessoa> retorno = null;
+
+            while (reader.Read())
+            {
+                if (retorno == null)
+                    retorno = new List<MPessoa>();
+
+                MPessoa pessoa = new MPessoa();
+                pessoa.CPF = reader["CPF"].ToString();
+                pessoa.Nome = reader["Nome"].ToString();
+                pessoa.DataNascimento = (DateTime)reader["DataNascimento"];
+
+                retorno.Add(pessoa);
+            }
+
+            reader.Close();
+            conexao.Close();
+
+            return retorno;
+        }
+
+
         public static List<MPessoa> Pesquisar(MPessoa item)
         {
             SqlConnection conexao = new SqlConnection();
@@ -214,26 +261,25 @@ namespace DAL
             comando.CommandText = "" +
                 " SELECT CPF, Nome, DataNascimento " +
                 " FROM TBPessoa " +
-                " WHERE 1=1 ";             
+                " WHERE 1=1 ";
 
-            //if(item.CPF.Trim() != "")
-            //{
-            //    comando.CommandText += " AND CPF = @CPF ";
+            if (item.CPF.Trim() != "")
+            {
+                comando.CommandText += " AND CPF = @CPF ";
 
-            //    SqlParameter param = new SqlParameter("@CPF", SqlDbType.Char);
-            //    param.Value = item.CPF;
-            //    comando.Parameters.Add(param);
-            //}
+                SqlParameter param = new SqlParameter("@CPF", SqlDbType.Char);
+                param.Value = item.CPF;
+                comando.Parameters.Add(param);
+            }
 
-            //if (item.Nome.Trim() != "")
-            //{
-            //    comando.CommandText += " AND Nome LIKE @Nome ";
+            if (item.Nome.Trim() != "")
+            {
+                comando.CommandText += " AND Nome LIKE @Nome ";
 
-            //    SqlParameter param = new SqlParameter("@Nome", SqlDbType.VarChar);
-            //    param.Value = "%" + item.Nome + "%";
-            //    comando.Parameters.Add(param);
-            //}
-
+                SqlParameter param = new SqlParameter("@Nome", SqlDbType.VarChar);
+                param.Value = "%" + item.Nome + "%";
+                comando.Parameters.Add(param);
+            }
 
             SqlDataReader reader = comando.ExecuteReader();
 

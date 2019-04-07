@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
+using DAL;
 using Model;
 
 namespace View
@@ -55,17 +56,17 @@ namespace View
 
         private void VVeiculoCadastro_Load(object sender, EventArgs e)
         {
-                atual = CPessoa.Obter(atual);
+            atual = CPessoa.Obter(atual);
 
-                if (atual != null)
-                {
-                    txtNome.Text = atual.Nome;
-                    textBoxCPF.Text = atual.CPF;
-                }
-                else
-                {
-                    Close();
-                }
+            if (atual != null)
+            {
+                textBoxCPF.Text = atual.CPF;
+            }
+            else
+            {
+                Close();
+            }
+
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)

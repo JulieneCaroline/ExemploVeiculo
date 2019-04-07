@@ -1,4 +1,5 @@
 ﻿using Controller;
+using DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,6 @@ namespace View
     public partial class VVeiculoEditar : Form
     {
         MVeiculo atual = null;
-        MPessoa atualPessoa = null;
         internal bool Atualizou = false;
 
         public VVeiculoEditar(MVeiculo item)
@@ -29,20 +29,24 @@ namespace View
         {
 
             atual.RENAVAM = textBoxRENAVAM.Text;
+
             atual.Placa = textBoxPlaca.Text;
             atual.Modelo = textBoxModelo.Text;
+
             int AuxAnoModelo = Convert.ToInt32(textBoxAnoModelo.Text);
             atual.AnoModelo = AuxAnoModelo;
 
             int AuxAnoFabricacao = Convert.ToInt32(textBoxAnoFabricacao.Text);
             atual.AnoFabricacao = AuxAnoFabricacao;
 
+            atual.PessoaCPF = comboBoxCpf.Text;
+
             bool sucesso = false;
 
             try
             {
                 CVeiculo.Atualizar(atual);
-                MessageBox.Show("Dados salvos com sucesso!");
+                //MessageBox.Show("Dados salvos com sucesso!");
                 sucesso = true;
             }
             catch 
@@ -60,13 +64,18 @@ namespace View
 
         private void VVeiculoEditar_Load(object sender, EventArgs e)
         {
+            List<MPessoa> ListaCPF = DPessoa.PesquisarComboBox(null);
+
+            foreach (MPessoa CPF in ListaCPF)
+            {
+                comboBoxCpf.Items.Add(CPF.CPF);
+            }
+
             atual = CVeiculo.Obter(atual);
            
-
-            
-
-            if (atual != null && atualPessoa != null)
+            if (atual != null)
             {
+
                 comboBoxCpf.Text = atual.PessoaCPF;
                 textBoxRENAVAM.Text = atual.RENAVAM;
                 textBoxPlaca.Text = atual.Placa;

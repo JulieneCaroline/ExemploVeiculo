@@ -112,7 +112,6 @@
             this.txtRenavam.Name = "txtRenavam";
             this.txtRenavam.Size = new System.Drawing.Size(115, 20);
             this.txtRenavam.TabIndex = 5;
-            this.txtRenavam.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtPlaca
             // 

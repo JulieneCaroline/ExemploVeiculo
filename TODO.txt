@@ -1,5 +1,12 @@
 * habilitar os campos de pesquisa
 * comparar anos[F]
 * centralizar telas[F]
-* editar
-* adicionar o campo cpf no VVeiculoEditar
+* editar [f]
+* Excluir [f]
+* adicionar o campo cpf no VVeiculoEditar [f]
+* adicionar o campo cpf no VVeiculoCadastrar
+* Msg para quando nao houver o campo pesquisado no veiculo
+* checar asc ou desc na pesquisa 
+* fazer todos os controlers 
+* criar função pesquisaComboxCarro 
+* Excliur nome do cadastro veiculo

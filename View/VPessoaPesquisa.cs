@@ -23,8 +23,8 @@ namespace View
         {
             MPessoa item = new MPessoa();
 
-            //item.CPF = txtCPF.Text;
-            //item.Nome = txtNome.Text;
+            item.CPF = txtCPF.Text;
+            item.Nome = txtNome.Text;
 
             dataGridView1.DataSource = CPessoa.Pesquisar(item);
         }
@@ -153,14 +153,10 @@ namespace View
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void adicionarVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cadastrar();
         }
+
     }
 }

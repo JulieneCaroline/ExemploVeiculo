@@ -67,7 +67,7 @@ namespace DAL
             comando.Parameters.Add(param);
 
             param = new SqlParameter("@AnoModelo", SqlDbType.Int);
-            int AnoModeloBd = item.AnoModelo;
+            int AnoModeloBd = Convert.ToInt32(item.AnoModelo);
             param.Value = AnoModeloBd;
             comando.Parameters.Add(param);
 
@@ -109,36 +109,42 @@ namespace DAL
             comando.Connection = conexao;
 
             comando.CommandText = "" +
-                "UPDATE TBVeiculo SET Placa = @Placa, Modelo = @Modelo, AnoFabricacao = @AnoFabricacao, AnoModelo = @AnoModelo " +
+                "UPDATE TBVeiculo SET  RENAVAM = @RENAVAM, Placa = @Placa, Modelo = @Modelo, AnoFabricacao = @AnoFabricacao, AnoModelo = @AnoModelo , PessoaCPF = @PessoaCPF " +
                 " WHERE RENAVAM = @RENAVAM";
 
             SqlParameter param = new SqlParameter("@RENAVAM", SqlDbType.Char);
             param.Value = item.RENAVAM;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@Placa", SqlDbType.VarChar);
+            param = new SqlParameter("@Placa", SqlDbType.Char);
             param.Value = item.Placa;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@Modelo", SqlDbType.Date);
+            param = new SqlParameter("@Modelo", SqlDbType.Char);
             param.Value = item.Modelo;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@AnoFabricacao", SqlDbType.Date);
-            param.Value = item.AnoFabricacao;
+            param = new SqlParameter("@AnoFabricacao", SqlDbType.Int);
+            int AnoFabricacaoBd = Convert.ToInt32(item.AnoFabricacao);
+            param.Value = AnoFabricacaoBd;
             comando.Parameters.Add(param);
 
-            param = new SqlParameter("@AnoModelo", SqlDbType.Date);
-            param.Value = item.AnoModelo;
+            param = new SqlParameter("@AnoModelo", SqlDbType.Int);
+            int AnoModeloBd = item.AnoModelo;
+            param.Value = AnoModeloBd;
+            comando.Parameters.Add(param);
+
+            param = new SqlParameter("@PessoaCPF", SqlDbType.Char);
+            param.Value = item.PessoaCPF;
             comando.Parameters.Add(param);
 
             try
             {
                 comando.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-                throw new Exception("O comando não pode ser executado");
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -286,33 +292,28 @@ namespace DAL
             //    comando.Parameters.Add(param);
             //}
 
+            //if (item.AnoFabricacao != 0)
+            //{
+            //    string AnoFabricacao = item.AnoFabricacao.ToString();
+            //    if (AnoFabricacao.Trim() != "")
+            //    {
+
+            //        comando.CommandText += " AND AnoFabricacao = @AnoFabricacao ";
+
+            //        SqlParameter param = new SqlParameter("@AnoFabricacao", SqlDbType.Int);
+            //        param.Value = AnoFabricacao;
+            //        comando.Parameters.Add(param);
+            //    }
+            //}
+           
             //if (item.PessoaCPF.Trim() != "")
             //{
             //    comando.CommandText += " AND PessoaCPF = @PessoaCPF ";
 
-            //    SqlParameter param = new SqlParameter("@Modelo", SqlDbType.VarChar);
-            //    param.Value = "%" + item.PessoaCPF + "%";
+            //    SqlParameter param = new SqlParameter("@PessoaCPF", SqlDbType.VarChar);
+            //    param.Value = item.PessoaCPF;
             //    comando.Parameters.Add(param);
             //}
-
-            //if (item.AnoModelo.Trim() != "")
-            //{
-            //    comando.CommandText += " AND AnoModelo = @AnoModelo ";
-
-            //    SqlParameter param = new SqlParameter("@AnoModelo", SqlDbType.Char);
-            //    param.Value = item.AnoModelo;
-            //    comando.Parameters.Add(param);
-            //}
-
-            //if (item.AnoFabricacao.Trim() != "")
-            //{
-            //    comando.CommandText += " AND AnoFabricacao = @AnoFabricacao ";
-
-            //    SqlParameter param = new SqlParameter("@AnoFabricacao", SqlDbType.Char);
-            //    param.Value = item.AnoFabricacao;
-            //    comando.Parameters.Add(param);
-            //}
-
 
             SqlDataReader reader = comando.ExecuteReader();
 

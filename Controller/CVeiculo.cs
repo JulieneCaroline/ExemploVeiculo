@@ -69,7 +69,7 @@ namespace Controller
 
             if (item.RENAVAM.Trim() == "" || item.RENAVAM.Length > 11)
             {
-                throw new Exception("Objeto VEICULO nome inválido");
+                throw new Exception("Objeto VEICULO RENAVAM inválido");
             }
 
             try

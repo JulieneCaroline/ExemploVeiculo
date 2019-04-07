@@ -40,10 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxCPF = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.textBoxCPF = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSalvarVeiculo
@@ -136,24 +136,6 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "RENAVAM";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "CPF do proprietario";
-            // 
-            // textBoxCPF
-            // 
-            this.textBoxCPF.Location = new System.Drawing.Point(131, 42);
-            this.textBoxCPF.Mask = "000,000,000-00";
-            this.textBoxCPF.Name = "textBoxCPF";
-            this.textBoxCPF.ReadOnly = true;
-            this.textBoxCPF.Size = new System.Drawing.Size(139, 20);
-            this.textBoxCPF.TabIndex = 26;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -171,6 +153,24 @@
             this.txtNome.Size = new System.Drawing.Size(139, 20);
             this.txtNome.TabIndex = 28;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            // 
+            // textBoxCPF
+            // 
+            this.textBoxCPF.Location = new System.Drawing.Point(131, 42);
+            this.textBoxCPF.Mask = "000,000,000-00";
+            this.textBoxCPF.Name = "textBoxCPF";
+            this.textBoxCPF.ReadOnly = true;
+            this.textBoxCPF.Size = new System.Drawing.Size(139, 20);
+            this.textBoxCPF.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "CPF do proprietario";
             // 
             // VVeiculoCadastro
             // 
@@ -216,9 +216,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox textBoxCPF;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.MaskedTextBox textBoxCPF;
+        private System.Windows.Forms.Label label1;
     }
 }

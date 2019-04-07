@@ -46,7 +46,7 @@
             // 
             // buttonSalvarVeiculo
             // 
-            this.buttonSalvarVeiculo.Location = new System.Drawing.Point(29, 250);
+            this.buttonSalvarVeiculo.Location = new System.Drawing.Point(29, 256);
             this.buttonSalvarVeiculo.Name = "buttonSalvarVeiculo";
             this.buttonSalvarVeiculo.Size = new System.Drawing.Size(237, 23);
             this.buttonSalvarVeiculo.TabIndex = 38;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 274);
+            this.ClientSize = new System.Drawing.Size(298, 291);
             this.Controls.Add(this.comboBoxCpf);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalvarVeiculo);

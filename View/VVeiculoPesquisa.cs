@@ -19,12 +19,7 @@ namespace View
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButtonExcluirVeiculo_Click(object sender, EventArgs e)
+        private void Excluir()
         {
             if (dataGridViewVeiculo.SelectedRows != null &&
                 dataGridViewVeiculo.SelectedRows.Count > 0)
@@ -75,16 +70,29 @@ namespace View
             }
         }
 
+        private void toolStripButtonExcluirVeiculo_Click(object sender, EventArgs e)
+        {
+            Excluir();
+        }
+
         private void buttonPesquisarVeiculo_Click(object sender, EventArgs e)
         {
             MVeiculo item = new MVeiculo();
 
-            //item.RENAVAM = txtRenavam.Text;
-            //item.Placa = txtPlaca.Text;
-            //item.Modelo = txtModelo.Text;
-            //int AuxAnoFabricacao = Convert.ToInt32(txtAnoFabricacao.Text);
-            //item.AnoFabricacao = AuxAnoFabricacao;
-            //item.PessoaCPF = txtPessoaCpf.Text;
+            item.RENAVAM = txtRenavam.Text;
+            item.Placa = txtPlaca.Text;
+            item.Modelo = txtModelo.Text;
+
+            if(txtAnoFabricacao.Text.Trim() == "")
+            {
+                item.AnoFabricacao = 0;
+            }
+            else
+            {
+                int AuxAnoFabricacao = Convert.ToInt32(txtAnoFabricacao.Text);
+                item.AnoFabricacao = AuxAnoFabricacao;
+            }
+            item.PessoaCPF = txtPessoaCpf.Text;
 
             dataGridViewVeiculo.DataSource = CVeiculo.Pesquisar(item);
         }
@@ -118,13 +126,11 @@ namespace View
                dataGridViewVeiculo.SelectedRows.Count > 0)
             {
                 MVeiculo item = new MVeiculo();
-                MPessoa pessoa = new MPessoa();
 
                 item.RENAVAM = dataGridViewVeiculo.SelectedRows[0].
                     Cells["rENAVAMDataGridViewTextBoxColumn"].Value.ToString();
 
-              
-
+                dataGridViewVeiculo.DataSource = CVeiculo.Pesquisar(item);
                 VVeiculoEditar v = new VVeiculoEditar(item);
                 v.ShowDialog();
 
@@ -135,9 +141,10 @@ namespace View
                     //atualiza a lista sem ir no banco
 
                     //forma 2
-                    // btnPesquisar_Click(null, null);
+                    buttonPesquisarVeiculo_Click(null, null);
                 }
             }
         }
+
     }
 }
