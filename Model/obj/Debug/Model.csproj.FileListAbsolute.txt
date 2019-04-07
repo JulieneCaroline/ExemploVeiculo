@@ -16,3 +16,9 @@ C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.csprojAssemblyRefe
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.dll
 C:\Users\Juliene\Desktop\ExemploVeiculo\Model\obj\Debug\Model.pdb
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\bin\Debug\Model.dll
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\bin\Debug\Model.pdb
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\obj\Debug\Model.dll
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\Model\obj\Debug\Model.pdb

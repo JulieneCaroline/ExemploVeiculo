@@ -34,3 +34,12 @@ C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\ExemploVeiculo\DAL\obj\Deb
 C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\ExemploVeiculo\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\ExemploVeiculo\DAL\obj\Debug\DAL.dll
 C:\Users\Juliene\Documents\repositorio\ExemploVeiculo\ExemploVeiculo\DAL\obj\Debug\DAL.pdb
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\bin\Debug\DAL.dll
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\bin\Debug\DAL.pdb
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\bin\Debug\Model.dll
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\bin\Debug\Model.pdb
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\obj\Debug\DAL.dll
+C:\Users\Thales\Desktop\GABIRU\ExemploVeiculo\DAL\obj\Debug\DAL.pdb
